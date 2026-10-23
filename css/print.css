@@ -1,0 +1,210 @@
+/* ========================================
+   Estilos para Impressão/PDF
+   ======================================== */
+
+@media print {
+    /* Ocultar elementos de UI */
+    .header,
+    .footer,
+    .nav-btn,
+    .btn,
+    .view-actions,
+    .toast-container,
+    .modal-container,
+    .no-print {
+        display: none !important;
+    }
+
+    /* Reset de layout */
+    body {
+        background: white !important;
+        color: #000 !important;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    .app,
+    .main-content {
+        padding: 0 !important;
+        max-width: none !important;
+    }
+
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .card-header {
+        background: #f5f5f5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Tabelas */
+    .table-container {
+        overflow: visible !important;
+        border: none !important;
+    }
+
+    .table {
+        font-size: 10pt;
+    }
+
+    .table th,
+    .table td {
+        padding: 6px 8px !important;
+        border: 1px solid #ddd !important;
+    }
+
+    .table th {
+        background: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .table tbody tr {
+        page-break-inside: avoid;
+    }
+
+    /* Badges */
+    .badge {
+        border: 1px solid currentColor !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Quebras de página */
+    .print-break-before {
+        page-break-before: always;
+    }
+
+    .print-break-after {
+        page-break-after: always;
+    }
+
+    .print-break-inside-avoid {
+        page-break-inside: avoid;
+    }
+
+    /* Cabeçalho do relatório */
+    .report-header {
+        text-align: center;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #1e3a5f;
+    }
+
+    .report-header .school-name {
+        font-size: 18pt;
+        font-weight: bold;
+        color: #1e3a5f;
+        margin-bottom: 4px;
+    }
+
+    .report-header .report-title {
+        font-size: 14pt;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    .report-header .report-meta {
+        font-size: 10pt;
+        color: #666;
+    }
+
+    /* Rodapé do relatório */
+    .report-footer {
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #ddd;
+        text-align: center;
+        font-size: 9pt;
+        color: #999;
+    }
+
+    .report-footer .page-number::before {
+        content: "Página " counter(page) " de " counter(pages);
+    }
+
+    /* Grid de estatísticas */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .stat-card {
+        border: 1px solid #ddd;
+        padding: 12px;
+    }
+
+    .stat-value {
+        font-size: 24pt;
+        font-weight: bold;
+    }
+
+    .stat-label {
+        font-size: 10pt;
+        color: #666;
+    }
+
+    /* Assinatura */
+    .signature-block {
+        margin-top: 48px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .signature-line {
+        width: 200px;
+        border-top: 1px solid #333;
+        padding-top: 8px;
+        text-align: center;
+        font-size: 10pt;
+    }
+
+    /* QR Code placeholder */
+    .qr-placeholder {
+        width: 80px;
+        height: 80px;
+        border: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 8pt;
+        color: #999;
+    }
+
+    /* Evitar quebras em elementos pequenos */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    .card,
+    .stat-card,
+    .table {
+        page-break-inside: avoid;
+    }
+}
+
+/* Configurações específicas para PDF (jsPDF) */
+.pdf-export {
+    padding: 20mm;
+    max-width: 100%;
+}
+
+.pdf-export .report-header {
+    margin-bottom: 20px;
+}
+
+.pdf-export .card {
+    margin-bottom: 16px;
+}
+
+.pdf-export .table {
+    width: 100%;
+    margin-bottom: 16px;
+}

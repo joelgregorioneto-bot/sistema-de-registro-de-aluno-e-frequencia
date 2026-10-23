@@ -1,0 +1,195 @@
+/* ========================================
+   CSS Custom Properties - Tema do Sistema
+   Colégio Estadual Presidente Kennedy
+   ======================================== */
+
+:root {
+    /* --- Cores Primárias (Azul Escola) --- */
+    --color-primary: #1e3a5f;
+    --color-primary-light: #2d4a7c;
+    --color-primary-dark: #152a45;
+    --color-primary-50: #e8eef5;
+    --color-primary-100: #d1dceb;
+    --color-primary-200: #a3b9d7;
+    --color-primary-600: #1a3658;
+    --color-primary-700: #152a45;
+
+    /* --- Cores Secundárias (Dourado/Amarelo) --- */
+    --color-secondary: #c8a84a;
+    --color-secondary-light: #d4b86b;
+    --color-secondary-dark: #a88d3d;
+    --color-secondary-50: #faf6ec;
+    --color-secondary-100: #f5edd9;
+
+    /* --- Cores Semânticas --- */
+    --color-success: #2e7d32;
+    --color-success-light: #4caf50;
+    --color-success-bg: #e8f5e9;
+    --color-success-border: #c8e6c9;
+
+    --color-warning: #f57f17;
+    --color-warning-light: #ffb300;
+    --color-warning-bg: #fff8e1;
+    --color-warning-border: #ffe082;
+
+    --color-danger: #c62828;
+    --color-danger-light: #ef5350;
+    --color-danger-bg: #fbe9e7;
+    --color-danger-border: #ffccbc;
+
+    --color-info: #0277bd;
+    --color-info-light: #29b6f6;
+    --color-info-bg: #e1f5fe;
+    --color-info-border: #b3e5fc;
+
+    /* --- Neutros --- */
+    --color-white: #ffffff;
+    --color-gray-50: #fafafa;
+    --color-gray-100: #f5f5f5;
+    --color-gray-200: #eeeeee;
+    --color-gray-300: #e0e0e0;
+    --color-gray-400: #bdbdbd;
+    --color-gray-500: #9e9e9e;
+    --color-gray-600: #757575;
+    --color-gray-700: #616161;
+    --color-gray-800: #424242;
+    --color-gray-900: #212121;
+
+    /* --- Backgrounds --- */
+    --bg-primary: var(--color-white);
+    --bg-secondary: var(--color-gray-50);
+    --bg-tertiary: var(--color-gray-100);
+    --bg-card: var(--color-white);
+    --bg-header: var(--color-primary);
+    --bg-footer: var(--color-gray-900);
+
+    /* --- Textos --- */
+    --text-primary: var(--color-gray-900);
+    --text-secondary: var(--color-gray-700);
+    --text-tertiary: var(--color-gray-500);
+    --text-inverse: var(--color-white);
+    --text-link: var(--color-primary);
+    --text-link-hover: var(--color-primary-dark);
+
+    /* --- Bordas --- */
+    --border-color: var(--color-gray-200);
+    --border-color-light: var(--color-gray-100);
+    --border-color-dark: var(--color-gray-300);
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    --border-radius-full: 9999px;
+
+    /* --- Sombras --- */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.09), 0 10px 10px rgba(0, 0, 0, 0.04);
+    --shadow-focus: 0 0 0 3px rgba(30, 58, 95, 0.25);
+
+    /* --- Espaçamentos --- */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+
+    /* --- Tipografia --- */
+    --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+    
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-lg: 1.125rem;   /* 18px */
+    --font-size-xl: 1.25rem;    /* 20px */
+    --font-size-2xl: 1.5rem;    /* 24px */
+    --font-size-3xl: 1.875rem;  /* 30px */
+    --font-size-4xl: 2.25rem;   /* 36px */
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+
+    /* --- Transições --- */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 350ms ease;
+
+    /* --- Z-index --- */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-modal-backdrop: 400;
+    --z-modal: 500;
+    --z-toast: 600;
+    --z-tooltip: 700;
+
+    /* --- Layout --- */
+    --header-height: 64px;
+    --sidebar-width: 260px;
+    --container-max: 1280px;
+    --container-padding: var(--space-6);
+}
+
+/* Modo escuro (preparado para futuro) */
+@media (prefers-color-scheme: dark) {
+    :root[data-theme="dark"] {
+        --bg-primary: #1a1a2e;
+        --bg-secondary: #16213e;
+        --bg-tertiary: #0f0f23;
+        --bg-card: #1e1e3f;
+        --bg-header: #0f0f23;
+        
+        --text-primary: #eaeaea;
+        --text-secondary: #b0b0b0;
+        --text-tertiary: #808080;
+        
+        --border-color: #2d2d4a;
+        --border-color-dark: #3d3d5a;
+        
+        --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+        --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+        --shadow-focus: 0 0 0 3px rgba(45, 74, 124, 0.4);
+    }
+}
+
+/* Reduzir movimento para acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0ms;
+        --transition-normal: 0ms;
+        --transition-slow: 0ms;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: var(--text-primary);
+        --border-color-dark: var(--text-primary);
+        --shadow-focus: 0 0 0 3px var(--text-primary);
+    }
+}
